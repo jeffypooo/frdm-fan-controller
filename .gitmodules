@@ -1,0 +1,3 @@
+[submodule "ext/mbed-os-lib/mbed-os"]
+	path = ext/mbed-os-lib/mbed-os
+	url = https://github.com/ARMmbed/mbed-os.git

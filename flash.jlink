@@ -1,0 +1,5 @@
+halt
+loadfile cmake-build-debug/src/frdm-fan-control.hex
+r
+go
+exit

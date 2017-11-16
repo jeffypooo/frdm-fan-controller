@@ -1,0 +1,25 @@
+
+if (NOT DEFINED ENV{GCC_ARM_TOOLCHAIN})
+    message(FATAL_ERROR "GCC_ARM_TOOLCHAIN not defined. Set this to the root directory of your cross toolchain.")
+endif ()
+
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_SYSTEM_VERSION 1)
+
+set(CMAKE_C_COMPILER_FORCED TRUE)
+set(CMAKE_CXX_COMPILER_FORCED TRUE)
+
+set(TOOLCHAIN_PATH $ENV{GCC_ARM_TOOLCHAIN})
+message(STATUS "Using cross toolchain at '${TOOLCHAIN_PATH}'")
+set(TOOLCHAIN_PREFIX "arm-none-eabi")
+message(STATUS "Using toolchain prefix '${TOOLCHAIN_PREFIX}'")
+set(CMAKE_OBJCOPY "${TOOLCHAIN_PATH}/bin/${TOOLCHAIN_PREFIX}-objcopy")
+set(CMAKE_SIZE "${TOOLCHAIN_PATH}/bin/${TOOLCHAIN_PREFIX}-size")
+set(CMAKE_C_COMPILER "${TOOLCHAIN_PATH}/bin/${TOOLCHAIN_PREFIX}-gcc")
+set(CMAKE_CXX_COMPILER "${TOOLCHAIN_PATH}/bin/${TOOLCHAIN_PREFIX}-g++")
+set(CMAKE_ASM_COMPILER "${TOOLCHAIN_PATH}/bin/${TOOLCHAIN_PREFIX}-g++")
+message(STATUS "OBJCOPY: '${CMAKE_OBJCOPY}'")
+message(STATUS "CC:      '${CMAKE_C_COMPILER}'")
+message(STATUS "CXX:     '${CMAKE_CXX_COMPILER}'")
+message(STATUS "ASM:     '${CMAKE_ASM_COMPILER}'")
+
