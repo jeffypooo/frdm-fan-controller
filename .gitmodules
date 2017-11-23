@@ -1,3 +1,6 @@
 [submodule "ext/mbed-os-lib/mbed-os"]
 	path = ext/mbed-os-lib/mbed-os
 	url = https://github.com/ARMmbed/mbed-os.git
+[submodule "ext/spdlog"]
+	path = ext/spdlog
+	url = https://github.com/gabime/spdlog.git

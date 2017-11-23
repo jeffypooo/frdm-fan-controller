@@ -1,0 +1,15 @@
+//
+// Created by jeff on 11/17/17.
+//
+
+#ifndef FRDM_FAN_CONTROL_FRDM_FAN_CONTROLLER_PINOUT_H
+#define FRDM_FAN_CONTROL_FRDM_FAN_CONTROLLER_PINOUT_H
+
+#include <PinNames.h>
+
+#define CONSOLE_RX      USBRX
+#define CONSOLE_TX      USBTX
+#define BT_UART_TX      PTC4
+#define BT_UART_RX      PTC3
+
+#endif //FRDM_FAN_CONTROL_FRDM_FAN_CONTROLLER_PINOUT_H

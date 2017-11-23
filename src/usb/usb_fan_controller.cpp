@@ -68,10 +68,10 @@ namespace usb {
     }
 
     void FanControllerDevice::DeviceThreadLoop() {
-        HID_REPORT recv;
+        auto *recv = new HID_REPORT;
         while (true) {
-            _hid_dev->read(&recv);
-            _b_led->write(recv.data[0]);
+            _hid_dev->read(recv);
+            _b_led->write(recv->data[0]);
         }
     }
 

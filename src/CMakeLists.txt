@@ -1,5 +1,5 @@
 
-set(PRJ_SRC main.cpp usb/usb_fan_controller.cpp usb/usb_fan_controller.h)
+set(PRJ_SRC main.cpp usb/usb_fan_controller.cpp usb/usb_fan_controller.h util/frdm_fc_pinout.h util/frdm_fc_io.h util/frdm_fc_io.cpp bluetooth/tinysine.h bluetooth/tinysine.cpp util/logcat.h util/logcat.cpp)
 set(EXEC_NAME ${PROJECT_NAME}.elf)
 add_executable(${EXEC_NAME} ${PRJ_SRC})
 target_link_libraries(${EXEC_NAME} mbed)
